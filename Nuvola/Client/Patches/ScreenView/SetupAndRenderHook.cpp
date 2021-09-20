@@ -2,8 +2,6 @@
 
 #include <string>
 
-#include <string>
-
 #include "../../../Render/IAnimWrapper.h"
 #include "../../../Render/RenderContext/MinecraftRenderer.h"
 #include "../../../Render/Custom/Renderer.h"
