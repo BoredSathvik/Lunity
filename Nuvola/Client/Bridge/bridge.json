@@ -409,7 +409,7 @@
 			},
 			{
 				"Name": "actorRuntimeID",
-				"Offset": "570",
+				"Offset": "558",
 				"Type": {
 					"TypeName": "size_t",
 					"TypeSize": 8
@@ -438,7 +438,7 @@
         "Fields": [
 			{
 				"Name": "yHeadRot",
-				"Offset": "728",
+				"Offset": "740",
 				"Type": {
 					"TypeName": "float",
 					"TypeSize": 4
@@ -461,7 +461,7 @@
 		"Fields": [
 			{
 				"Name": "gameMode",
-				"Offset": "12E8",
+				"Offset": "1310",
 				"Type":{
 					"TypeName": "class GameMode*",
 					"TypeSize": 8
