@@ -3,9 +3,9 @@
 #include "../../Features/CommandMgr.h"
 #include "../../Events/EventHandler.h"
 
-void __fastcall SendChatMessageHook::clientInstanceCallback_1_17_11_1(class ClientInstanceScreenModel* screenModel, std::string* text) {
+void __fastcall SendChatMessageHook::clientInstanceCallback_1_17_11_1(class ClientInstanceScreenModel* screenModel, nuv::string* text) {
 
-	ChatEvent event(*text);
+	ChatEvent event(text->getString());
 	std::vector<Listener*> listeners = EventHandler::getListeners();
 	for(auto listener : listeners) {
 		listener->onChatEvent(event);

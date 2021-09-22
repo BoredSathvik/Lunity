@@ -10,9 +10,9 @@ struct ClientInstance {
 	class MinecraftGame* minecraftGame;
 	char padding_208[32];
 	class LoopbackPacketSender* loopbackPacketSender;
-	char padding_320[104];
+	char padding_312[96];
 	class LocalPlayer* clientPlayer;
-	char padding_1240[912];
+	char padding_1256[936];
 	class GuiData* guiData;
 	/* Virtuals */
 	virtual void virt_pad_0() {};
@@ -177,6 +177,43 @@ struct ClientInstance {
 	virtual void virt_pad_159() {};
 	virtual void virt_pad_160() {};
 	virtual auto getOptions() -> class Options* {};
+	virtual void virt_pad_162() {};
+	virtual void virt_pad_163() {};
+	virtual void virt_pad_164() {};
+	virtual void virt_pad_165() {};
+	virtual void virt_pad_166() {};
+	virtual void virt_pad_167() {};
+	virtual void virt_pad_168() {};
+	virtual void virt_pad_169() {};
+	virtual void virt_pad_170() {};
+	virtual void virt_pad_171() {};
+	virtual void virt_pad_172() {};
+	virtual void virt_pad_173() {};
+	virtual void virt_pad_174() {};
+	virtual void virt_pad_175() {};
+	virtual void virt_pad_176() {};
+	virtual void virt_pad_177() {};
+	virtual void virt_pad_178() {};
+	virtual void virt_pad_179() {};
+	virtual void virt_pad_180() {};
+	virtual void virt_pad_181() {};
+	virtual void virt_pad_182() {};
+	virtual void virt_pad_183() {};
+	virtual void virt_pad_184() {};
+	virtual void virt_pad_185() {};
+	virtual void virt_pad_186() {};
+	virtual void virt_pad_187() {};
+	virtual void virt_pad_188() {};
+	virtual void virt_pad_189() {};
+	virtual void virt_pad_190() {};
+	virtual void virt_pad_191() {};
+	virtual void virt_pad_192() {};
+	virtual void virt_pad_193() {};
+	virtual void virt_pad_194() {};
+	virtual void virt_pad_195() {};
+	virtual void virt_pad_196() {};
+	virtual void virt_pad_197() {};
+	virtual auto getGuiData() -> class GuiData* {};
 	/* Functions */
 };
 #endif

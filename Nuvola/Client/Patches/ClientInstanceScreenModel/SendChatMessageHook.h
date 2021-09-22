@@ -6,7 +6,7 @@
 #include "../../Features/ModuleMgr.h"
 
 class SendChatMessageHook : public IPatch {
-	static void clientInstanceCallback_1_17_11_1(class ClientInstanceScreenModel* screenModel, std::string* text);
+	static void clientInstanceCallback_1_17_11_1(class ClientInstanceScreenModel* screenModel, nuv::string* text);
 public:
 	static inline uintptr_t funcOriginal = 0;
 	SendChatMessageHook();
