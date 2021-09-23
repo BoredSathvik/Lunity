@@ -1079,7 +1079,7 @@
 					"TypeName": "class Actor*",
 					"TypeSize": 8
 				}
-			}
+			},
 			{
 				"Name": "actors",
 				"Offset": "920",

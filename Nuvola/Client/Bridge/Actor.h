@@ -12,11 +12,11 @@ struct Actor {
 	Vector2<float> lookingVec;
 	char padding_480[152];
 	bool onGround;
-	char padding_872[391];
+	char padding_864[383];
 	class BlockSource* blockSource;
 	class Dimension* dimension;
 	class Level* level;
-	char padding_1000[104];
+	char padding_1000[112];
 	ActorType entityTypeId;
 	char padding_1232[160];
 	AABB hitbox;
@@ -24,7 +24,7 @@ struct Actor {
 	Vector3<float> position;
 	Vector3<float> oldPos;
 	Vector3<float> velocity;
-	char padding_1392[88];
+	char padding_1368[64];
 	size_t actorRuntimeID;
 	/* Virtuals */
 	virtual void virt_pad_0() {};

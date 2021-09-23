@@ -8,7 +8,8 @@ struct Level {
 	/* Fields */
 	char padding_112[112];
 	std::vector<Player*> players;
-	char padding_9952[9816];
+	char padding_2608[2472];
+	class Actor* targetEntity;
 	std::vector<Actor*> actors;
 	/* Virtuals */
 	/* Functions */

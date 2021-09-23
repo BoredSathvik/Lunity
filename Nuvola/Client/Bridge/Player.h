@@ -7,7 +7,7 @@
 #include "Mob.h"
 struct Player : public Mob {
 	/* Fields */
-	char padding_4840[3004];
+	char padding_4880[3020];
 	class GameMode* gameMode;
 	/* Virtuals */
 	/* Functions */

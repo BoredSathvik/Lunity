@@ -110,6 +110,7 @@ static_assert(sizeof(nuv::string) == 32, "nuv::string is misaligned!");
 	//Useful for the entity list now since mojang made that code super confusing.
 	//Its easier just to read the actor pointers when theyre ticked and store them.
 	//This list type is here to do exactly that.
+	/*
 	template <typename T>
 	class qrlist {
 		T* data;
@@ -161,6 +162,7 @@ static_assert(sizeof(nuv::string) == 32, "nuv::string is misaligned!");
 			return data[location];
 		}
 	};
+	*/
 
 	//TODO: finish kthx
 	template <typename T>

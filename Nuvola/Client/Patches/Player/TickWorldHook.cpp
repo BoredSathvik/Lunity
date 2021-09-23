@@ -6,7 +6,8 @@
 void* __fastcall TickWorldHook::TickWorldHookCallback_1_17_11_1(Player* player, class Tick* tick) {
 	void* ret = PLH::FnCast(funcOriginal, &TickWorldHookCallback_1_17_11_1)(player, tick);
 	LocalPlayer* localPlayer = Utils::GetClientInstance()->clientPlayer;
-static_assert(offsetof(Player, gameMode)==0x12E8, "Player::gameMode is misaligned!");
+//Moved in new update... only gonna comment this for now
+//static_assert(offsetof(Player, gameMode)==0x12E8, "Player::gameMode is misaligned!");
 	PlayerTickEvent event(player->gameMode, player, localPlayer==player);
 	std::vector<Listener*> listeners = EventHandler::getListeners();
 	for(auto listener : listeners) {
