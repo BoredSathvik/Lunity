@@ -104,6 +104,64 @@ static_assert(sizeof(textData) == 16, "textData is misaligned!");
 	};
 static_assert(sizeof(nuv::string) == 32, "nuv::string is misaligned!");
 
+	//Quickly refreshing list
+	//A list type that is good for when it needs to be quickly
+	//modified constantly, with a fast clear function.
+	//Useful for the entity list now since mojang made that code super confusing.
+	//Its easier just to read the actor pointers when theyre ticked and store them.
+	//This list type is here to do exactly that.
+	template <typename T>
+	class qrlist {
+		T* data;
+		size_t nextLocation = 0;
+		size_t ptrsTillRealloc = 0;
+	public:
+		//We can specify a starting size until we reallocate.
+		qrlist(size_t startingSize) {
+			ptrsTillRealloc = size;
+			data = (T*)malloc(ptrsTillRealloc*sizeof(size_t));
+		};
+		~qrlist() {
+			free(data);
+		}
+		void reallocate(size_t nextRealloc) {
+			newData = (T*)malloc(nextRealloc*sizeof(size_t));
+			int i;
+			while(i < nextLocation) {
+				newData[i] = data[i];
+				i++;
+			}
+			ptrsTillRealloc = nextRealloc;
+			free(data);
+		}
+		void push(T*) {
+			if(nextLocation == ptrsTillRealloc) {
+				
+			}
+		}
+		void pop(T*) {
+
+		}
+		void clear() {
+			nextLocation = 0;
+		}
+		T* operator[](size_t location) {
+			//If the data is outside of our range, pretend it doesn't exist
+			if(location >= nextLocation || location < 0) {
+				return nullptr;
+			}
+			//If that data was popped, pretend it doesn't exist
+			if(data[location] == nullptr) {
+				//We might lose time here if there are a ton of popped elements,
+				//but most cases this happens, its more likely itll be cleared.
+				//this also may be a means to read "cleared" data, but the first if check
+				//should catch that
+				return operator[](location+1);
+			}
+			return data[location];
+		}
+	};
+
 	//TODO: finish kthx
 	template <typename T>
 	class vector {

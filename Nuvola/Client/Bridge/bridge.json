@@ -337,7 +337,7 @@
 			},
 			{
 				"Name": "blockSource",
-				"Offset": "368",
+				"Offset": "360",
 				"Type":{
 					"TypeName": "class BlockSource*",
 					"TypeSize": 8
@@ -345,7 +345,7 @@
 			},
 			{
 				"Name": "dimension",
-				"Offset": "370",
+				"Offset": "368",
 				"Type":{
 					"TypeName": "class Dimension*",
 					"TypeSize": 8
@@ -353,7 +353,7 @@
 			},
 			{
 				"Name": "level",
-				"Offset": "378",
+				"Offset": "370",
 				"Type":{
 					"TypeName": "class Level*",
 					"TypeSize": 8
@@ -1073,8 +1073,16 @@
 				}
 			},
 			{
+				"Name": "targetEntity",
+				"Offset": "A30",
+				"Type": {
+					"TypeName": "class Actor*",
+					"TypeSize": 8
+				}
+			}
+			{
 				"Name": "actors",
-				"Offset": "26E0",
+				"Offset": "920",
 				"Type": {
 					"TypeName": "std::vector<Actor*>",
 					"TypeSize": 24
