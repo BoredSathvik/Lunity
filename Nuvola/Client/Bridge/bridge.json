@@ -1056,7 +1056,51 @@
 	{
 		"ClassName": "BlockSource",
 		"Extends": null,
+		"Includes":[
+			"ActorType"
+		],
 		"Fields":[],
+		"Functions":[
+			{
+				"Name": "fetchEntities2",
+				"Signature": "?? 89 ?? ?? ?? ?? 89 ?? ?? ?? 57 48 83 ?? ?? 48 8B ?? ?? ?? ?? ?? 48 33 ?? ?? 89 ?? ?? ?? 48 8B ?? ?? 41",
+				"Parameters": [
+					{
+						"Name": "this",
+						"Type": "BlockSource"
+					},
+					{
+						"Name": "actorType",
+						"Type": "ActorType"
+					},
+					{
+						"Name": "aabb",
+						"Type": "AABB*"
+					},
+					{
+						"Name": "anyType",
+						"Type": "bool"
+					}
+				],
+				"Type": "StackResultStorageEntity*",
+				"Convention": "__thiscall"
+			}
+		],
+		"Virtuals":[]
+	},
+	{
+		"ClassName": "Dimension",
+		"Extends": null,
+		"Fields": [
+			{
+				"Name": "actorCount",
+				"Offset": "140",
+				"Type": {
+					"TypeName": "size_t",
+					"TypeSize": 8
+				}
+			}
+		],
 		"Functions":[],
 		"Virtuals":[]
 	},
@@ -1073,19 +1117,19 @@
 				}
 			},
 			{
-				"Name": "targetEntity",
-				"Offset": "A30",
-				"Type": {
-					"TypeName": "class Actor*",
-					"TypeSize": 8
-				}
-			},
-			{
 				"Name": "actors",
 				"Offset": "920",
 				"Type": {
 					"TypeName": "std::vector<Actor*>",
 					"TypeSize": 24
+				}
+			},
+			{
+				"Name": "targetEntity",
+				"Offset": "A30",
+				"Type": {
+					"TypeName": "class Actor*",
+					"TypeSize": 8
 				}
 			}
 		],

@@ -50,13 +50,14 @@ auto Utils::GetClientInstance() -> ClientInstance* {
 	return clientInstance;
 }
 
-
+/*
 auto Utils::GetActorList() -> std::vector<Actor*>* {
 	if(actorList == nullptr) {
 		actorList = new std::vector<Actor*>();
 	}
 	return actorList;
 }
+*/
 
 uintptr_t uiMatPtr = 0;
 auto Utils::GetUIMaterialPtr() -> class MaterialPtr* {

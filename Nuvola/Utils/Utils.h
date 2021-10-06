@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include "../Client/Bridge/ClientInstance.h"
-#include "../Client/Bridge/Actor.h"
+//#include "../Client/Bridge/Actor.h"
 #include <gsl/gsl>
 #include <sstream>
 
@@ -33,7 +33,7 @@ class Utils {
 	static inline class MaterialPtr* materialPtr;
 
 	//List of ALL entities
-	static inline std::vector<Actor*>* actorList;
+	//static inline std::vector<Actor*>* actorList;
 
 	//Minecraft Output (mcout), how creative
 	static lun::ostream* omcout;
@@ -43,7 +43,7 @@ public:
 	static auto mcout() -> lun::ostream&;
 	static void SetClientInstance(uintptr_t address);
 	static auto GetClientInstance() -> ClientInstance*;
-	static auto GetActorList() -> std::vector<Actor*>*;
+	//static auto GetActorList() -> std::vector<Actor*>*;
 	static auto GetUIMaterialPtr() -> class MaterialPtr*;
 };
 
@@ -75,6 +75,6 @@ namespace lun {
 			return *this;
 		}
 	};
-}
+};
 
 #endif /* NUVOLA_UTILS_UTILS */
