@@ -18,7 +18,14 @@ void Renderer::Begin() {
 	vectors.clear();
 }
 void Renderer::End() {
-	tessellator->begin(1, vertCount);
+	
+	// 1: quads: four vertexs / a quadrilateral
+	// 2: triangle list: https://docs.microsoft.com/en-us/windows/uwp/graphics-concepts/triangle-lists
+	// 3: trianglestrip (6): https://docs.microsoft.com/en-us/windows/uwp/graphics-concepts/triangle-strips
+	// 4: line list: https://docs.microsoft.com/en-us/windows/uwp/graphics-concepts/line-lists
+	// 5: line strip (7): https://docs.microsoft.com/en-us/windows/uwp/graphics-concepts/line-strips
+	
+	tessellator->begin(3, vertCount);
 	for(auto vec : vectors) {
 		tessellator->vertex(vec.x, vec.y, 0);
 	}
